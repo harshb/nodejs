@@ -1,1 +1,28 @@
-#install node js
+#install node js and NVM
+
+1. run installer  from : http://nodejs.org/
+
+2. to check
+
+node --version
+npm --version
+
+3. Configure Path
+
+on mac you may need to edit ~/.bashrc file and add to shell path
+/usr/local/bin
+
+export PATH =/usr/local/bin:$PATH
+
+4. Home brew
+
+ On mac if you prefer to work from source, install Homebrew
+
+ brew update && brew install node.js
+
+5. To  get the latest version of NPM
+
+curl http://npmjs.org/install.sh | sh
+
+#Chapter 2 : Express.js
+
