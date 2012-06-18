@@ -1,0 +1,143 @@
+#Useful Commands
+
+1. npm list
+
+shows the sofware installed in this application’s
+immediate directory. 
+
+2. “npm list -g” shows only the sofware that's installed globally
+
+#install node js and NVM
+
+1. run installer  from : http://nodejs.org/
+
+2. to check
+
+node --version
+npm --version
+
+3. Configure Path
+
+on mac you may need to edit ~/.bashrc file and add to shell path
+/usr/local/bin
+
+export PATH =/usr/local/bin:$PATH
+
+4. Home brew
+
+ On mac if you prefer to work from source, install Homebrew
+
+ brew update && brew install node.js
+
+5. To  get the latest version of NPM
+
+curl http://npmjs.org/install.sh | sh
+
+6. install CoffeeScript locally and add it to
+package.json
+
+npm install coffee-script --save
+
+
+#Chapter 2 : Express.js
+
+
+Express is like Ruby's Sinatra. Express is worth installing globally so you can generate new Express applications with it.
+
+1. Install
+
+sudo npm install -g express
+
+2. New Express application
+
+express new HotPie
+
+## To Run
+
+1. install in directory
+
+cd :\hotpie
+npm install
+
+
+2. Rename app.js
+
+to server.js
+
+3. npm start
+
+## Prepare
+
+1. Delete Public folder and copy the Public folder from Peepcodes' Final project.
+
+2. Delete Routes dir
+
+3. Crete an apps directory
+
+4. in server.js add at the top:
+
+require('coffee-script');
+
+
+
+
+#Chapter #: Authentication
+
+I like treating a web application as a series of smaller web applications.
+
+Create a authentication directory in apps
+
+
+
+## View (login.jade)
+
+1. Create folder/files
+
+In the apps  folder create folder called views. In this views dirctory create a file: login.jade (this is the view template)
+
+2. View code in login.jade:
+
+form(action='/sessions', method='post')
+  label
+    | Username
+    input(type='text', name='user')
+  label
+    | Password
+    input(type='password', name='password')
+  input(type='submit', name='Submit')
+
+
+## Routes
+
+1. in Server.js
+
+in server.js in the routes section replace:
+
+app.get('/', routes.index);
+
+With
+
+require('./apps/authentication/routes')(app)
+
+
+2. In server.js (line 9)
+
+Replace:
+var express = require('express')
+  , routes = require('./routes');
+
+With:
+
+ var express = require('express');
+
+
+2. in routes.rb
+
+in authentication folder create a file: routes.rb
+
+routes = (app) ->
+  app.get '/login', (req, res) ->
+    res.render "#{__dirname}/views/login",
+    title: 'Login'
+    stylesheet:  'login'
+ module.exports = routes
