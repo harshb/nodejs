@@ -81,7 +81,7 @@ require('coffee-script');
 
 
 
-#Chapter #: Authentication
+#Chapter 3: Authentication
 
 I like treating a web application as a series of smaller web applications.
 
@@ -95,7 +95,7 @@ Create a authentication directory in apps
 
 In the apps  folder create folder called views. In this views dirctory create a file: login.jade (this is the view template)
 
-2. View code in login.jade:
+2. View code in apps/authentication/views/alogin.jade:
 
 form(action='/sessions', method='post')
   label
@@ -141,3 +141,29 @@ routes = (app) ->
     title: 'Login'
     stylesheet:  'login'
  module.exports = routes
+
+# Chapter 4 : Layout
+
+1. Global layout is in Root\views\layout.jade
+
+Replace layout.jade with this:
+
+!!!
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/#{stylesheet}.css')
+  body
+    #header
+        h1= title
+    != body
+
+# Chapter 5: Development (31.12)
+
+
+## Automatically restart the server using node-dev
+
+Use node-dev
+
+
+## Define Development Dependencies
