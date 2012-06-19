@@ -163,7 +163,74 @@ html
 
 ## Automatically restart the server using node-dev
 
-Use node-dev
+1. install node-dev
 
+npm install node-dev --save
+
+2. to run 
+./node_modules/node-dev/node-dev server.js
+
+3. Create a shell script  file (called start) to run this
+
+#! usr/bin env sh
+
+./node_modules/node-dev/node-dev server.js
+
+4. make it executable
+
+chmod +x start
 
 ## Define Development Dependencies
+
+npm has a devDependencies section node-dev should be listed there as its not required for production. Modify package.json as follows
+
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "2.5.10",
+    "jade": ">= 0.0.1",
+    "coffee-script": "~1.3.3"
+  
+  },
+  "devDependencies": {
+    "node-dev": "~0.2.3"
+  }
+
+}
+
+
+#Chapter 6: Easy Testing
+
+Mocha
+http://visionmedia.github.com/mocha/
+
+##Install
+
+1. install mocha
+
+npm install mocha --save
+
+2. in package.jason, move mocha entry to devDependencies section
+
+
+##Tests
+
+1. Create dir/file structure
+
+test/app/authentication-test.coffee
+
+2. install request
+
+npm install request --save
+
+3. in package.jason, move request entry to devDependencies section
+
+4. in test folder create a file _helper.js and add one line to it
+
+require('coffee-script');
+
+4. run tests
+
+./node_modules/mocha/bin/mocha test/_helper.js test/apps/authentication-test.coffee
