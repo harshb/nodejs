@@ -12,5 +12,8 @@
     "node-dev": "~0.2.3",
     "mocha": "~1.2.0",
     "request": "~2.9.202"
+  },
+  "scripts": {
+    "test": "./bin/test"
   }
 }

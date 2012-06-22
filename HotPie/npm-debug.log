@@ -1,7 +1,11 @@
 info it worked if it ends with ok
 verbose cli [ 'c:\\Program Files (x86)\\nodejs\\node.exe',
 verbose cli   'c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-verbose cli   'start' ]
+verbose cli   'install',
+verbose cli   'redis',
+verbose cli   'hiredis',
+verbose cli   'connect-redis',
+verbose cli   '--save' ]
 info using npm@1.1.24
 info using node@v0.6.19
 verbose config file C:\Users\hbhas\.npmrc
@@ -9,34 +13,869 @@ verbose config file c:\Program Files (x86)\nodejs\etc\npmrc
 verbose config file c:\Program Files (x86)\nodejs\node_modules\npm\npmrc
 verbose caching C:\_nodejs\hbnodejs\HotPie\package.json
 verbose loadDefaults application-name@0.0.1
-verbose run-script [ 'prestart', 'start', 'poststart' ]
-info prestart application-name@0.0.1
-info start application-name@0.0.1
+verbose caching C:\_nodejs\hbnodejs\HotPie\node_modules\coffee-script\package.json
+verbose caching C:\_nodejs\hbnodejs\HotPie\node_modules\express\package.json
+verbose caching C:\_nodejs\hbnodejs\HotPie\node_modules\mocha\package.json
+verbose caching C:\_nodejs\hbnodejs\HotPie\node_modules\jade\package.json
+verbose caching C:\_nodejs\hbnodejs\HotPie\node_modules\request\package.json
+verbose caching C:\_nodejs\hbnodejs\HotPie\node_modules\node-dev\package.json
+verbose from cache C:\_nodejs\hbnodejs\HotPie\package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'redis', null ]
+silly cache add: name, spec, args [ undefined, 'redis', [ 'redis', null ] ]
+verbose parsed url { pathname: 'redis', path: 'redis', href: 'redis' }
+verbose cache add [ 'hiredis', null ]
+silly cache add: name, spec, args [ undefined, 'hiredis', [ 'hiredis', null ] ]
+verbose parsed url { pathname: 'hiredis', path: 'hiredis', href: 'hiredis' }
+verbose cache add [ 'connect-redis', null ]
+silly cache add: name, spec, args [ undefined, 'connect-redis', [ 'connect-redis', null ] ]
+verbose parsed url { pathname: 'connect-redis',
+verbose parsed url   path: 'connect-redis',
+verbose parsed url   href: 'connect-redis' }
+verbose addNamed [ 'redis', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'redis', '', false ]
+verbose addNamed [ 'hiredis', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'hiredis', '', false ]
+verbose addNamed [ 'connect-redis', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'connect-redis', '', false ]
+verbose raw, before any munging redis
+verbose url resolving [ 'https://registry.npmjs.org/', './redis' ]
+verbose url resolved https://registry.npmjs.org/redis
+http GET https://registry.npmjs.org/redis
+verbose raw, before any munging hiredis
+verbose url resolving [ 'https://registry.npmjs.org/', './hiredis' ]
+verbose url resolved https://registry.npmjs.org/hiredis
+http GET https://registry.npmjs.org/hiredis
+verbose raw, before any munging connect-redis
+verbose url resolving [ 'https://registry.npmjs.org/', './connect-redis' ]
+verbose url resolved https://registry.npmjs.org/connect-redis
+http GET https://registry.npmjs.org/connect-redis
+http 200 https://registry.npmjs.org/connect-redis
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+silly get cb     etag: '"1OOZJQKY5PV5O76PHRNIMKQ5A"',
+silly get cb     date: 'Thu, 21 Jun 2012 21:32:02 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '15860' } ]
+silly name, range, hasData 2 [ 'connect-redis', '', true ]
+silly versions [ 'connect-redis',
+silly versions   [ '0.0.1',
+silly versions     '0.0.2',
+silly versions     '0.1.0',
+silly versions     '0.1.1',
+silly versions     '0.1.2',
+silly versions     '0.1.3',
+silly versions     '0.2.0',
+silly versions     '0.2.1',
+silly versions     '0.2.2',
+silly versions     '0.2.3',
+silly versions     '1.0.0',
+silly versions     '1.0.1',
+silly versions     '1.0.2',
+silly versions     '1.0.3',
+silly versions     '1.0.4',
+silly versions     '1.0.5',
+silly versions     '1.0.6',
+silly versions     '1.0.7',
+silly versions     '1.1.0',
+silly versions     '1.2.0',
+silly versions     '1.3.0',
+silly versions     '1.4.0' ] ]
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl0.9.8r-v83.6.6.25-win32-ia32-6.1.7601',
+verbose bin dist   { shasum: '5611e29926ceba93a6d041aa0500a6bbac74cdfa',
+verbose bin dist     tarball: 'http://registry.npmjs.org/connect-redis/-/connect-redis-1.4.0.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/connect-redis/-/connect-redis-1.4.0.tgz',
+verbose addRemoteTarball   '5611e29926ceba93a6d041aa0500a6bbac74cdfa' ]
+verbose fetch to C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314322549-0.501792797120288\tmp.tgz
+http GET https://registry.npmjs.org/connect-redis/-/connect-redis-1.4.0.tgz
+http 200 https://registry.npmjs.org/hiredis
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+silly get cb     etag: '"APO0M7I547HMQM5A9X0KYVW6J"',
+silly get cb     date: 'Thu, 21 Jun 2012 21:32:03 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '9749' } ]
+silly name, range, hasData 2 [ 'hiredis', '', true ]
+silly versions [ 'hiredis',
+silly versions   [ '0.1.0',
+silly versions     '0.1.1',
+silly versions     '0.1.2',
+silly versions     '0.1.3',
+silly versions     '0.1.4',
+silly versions     '0.1.5',
+silly versions     '0.1.6',
+silly versions     '0.1.8',
+silly versions     '0.1.9',
+silly versions     '0.1.10',
+silly versions     '0.1.12',
+silly versions     '0.1.13',
+silly versions     '0.1.14' ] ]
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl0.9.8r-v83.6.6.25-win32-ia32-6.1.7601',
+verbose bin dist   { shasum: '37a8742dc26c14a7be8cf69549d96781403188b2',
+verbose bin dist     tarball: 'http://registry.npmjs.org/hiredis/-/hiredis-0.1.14.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/hiredis/-/hiredis-0.1.14.tgz',
+verbose addRemoteTarball   '37a8742dc26c14a7be8cf69549d96781403188b2' ]
+verbose fetch to C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314323244-0.7429820233955979\tmp.tgz
+http GET https://registry.npmjs.org/hiredis/-/hiredis-0.1.14.tgz
+http 200 https://registry.npmjs.org/connect-redis/-/connect-redis-1.4.0.tgz
+http 200 https://registry.npmjs.org/redis
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+silly get cb     etag: '"17VBCJ3TSFAQ9T87RNMC739IQ"',
+silly get cb     date: 'Thu, 21 Jun 2012 21:32:03 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '61369' } ]
+silly name, range, hasData 2 [ 'redis', '', true ]
+silly versions [ 'redis',
+silly versions   [ '0.0.1',
+silly versions     '0.0.2',
+silly versions     '0.0.3',
+silly versions     '0.0.4',
+silly versions     '0.0.7',
+silly versions     '0.0.8',
+silly versions     '0.1.0',
+silly versions     '0.1.1',
+silly versions     '0.1.2',
+silly versions     '0.2.0',
+silly versions     '0.2.1',
+silly versions     '0.2.2',
+silly versions     '0.2.3',
+silly versions     '0.2.4',
+silly versions     '0.2.6',
+silly versions     '0.3.0',
+silly versions     '0.3.1',
+silly versions     '0.3.2',
+silly versions     '0.3.3',
+silly versions     '0.3.4',
+silly versions     '0.3.5',
+silly versions     '0.3.6',
+silly versions     '0.3.7',
+silly versions     '0.3.9',
+silly versions     '0.4.0',
+silly versions     '0.4.1',
+silly versions     '0.4.2',
+silly versions     '0.5.0',
+silly versions     '0.5.1',
+silly versions     '0.5.2',
+silly versions     '0.5.3',
+silly versions     '0.5.4',
+silly versions     '0.5.5',
+silly versions     '0.5.6',
+silly versions     '0.5.7',
+silly versions     '0.5.8',
+silly versions     '0.5.9',
+silly versions     '0.5.10',
+silly versions     '0.5.11',
+silly versions     '0.6.0',
+silly versions     '0.6.1',
+silly versions     '0.6.2',
+silly versions     '0.6.3',
+silly versions     '0.6.4',
+silly versions     '0.6.5',
+silly versions     '0.6.6',
+silly versions     '0.6.7',
+silly versions     '0.7.0',
+silly versions     '0.7.1',
+silly versions     '0.7.2' ] ]
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl0.9.8r-v83.6.6.25-win32-ia32-6.1.7601',
+verbose bin dist   { shasum: 'fa557fef4985ab3e3384fdc5be6e2541a0bb49af',
+verbose bin dist     tarball: 'http://registry.npmjs.org/redis/-/redis-0.7.2.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/redis/-/redis-0.7.2.tgz',
+verbose addRemoteTarball   'fa557fef4985ab3e3384fdc5be6e2541a0bb49af' ]
+verbose fetch to C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314323579-0.22478495677933097\tmp.tgz
+http GET https://registry.npmjs.org/redis/-/redis-0.7.2.tgz
+silly updated sha bytes 5096
+info shasum 5611e29926ceba93a6d041aa0500a6bbac74cdfa
+info shasum C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314322549-0.501792797120288\tmp.tgz
+verbose unpack C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314322549-0.501792797120288\tmp.tgz
+silly gunzTarPerm modes [ '755', '644' ]
+silly extracting entry package.json
+silly extracting entry .npmignore
+silly extracting entry test.js
+silly extracting entry bm.js
+silly extracting entry index.js
+silly extracting entry index.html
+silly extracting entry lib/connect-redis.js
+silly extracting entry Makefile
+silly extracting entry History.md
+silly extracting entry Readme.md
+silly extracting entry .gitmodules
+verbose caching C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314322549-0.501792797120288\package\package.json
+verbose loadDefaults connect-redis@1.4.0
+verbose from cache C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314322549-0.501792797120288\package\package.json
+verbose tar.pack [ 'C:\\Users\\hbhas\\AppData\\Roaming\\npm-cache\\connect-redis\\1.4.0\\package.tgz',
+verbose tar.pack   'C:\\Users\\hbhas\\AppData\\Local\\Temp\\npm-1340314322549\\1340314322549-0.501792797120288\\package' ]
+verbose tarball C:\Users\hbhas\AppData\Roaming\npm-cache\connect-redis\1.4.0\package.tgz
+verbose folder C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314322549-0.501792797120288\package
+verbose unpack C:\Users\hbhas\AppData\Roaming\npm-cache\connect-redis\1.4.0\package.tgz
+silly gunzTarPerm modes [ '755', '644' ]
+silly extracting entry package.json
+silly modified mode [ 'package.json', 438, 420 ]
+silly extracting entry .npmignore
+silly modified mode [ '.npmignore', 438, 420 ]
+silly extracting entry test.js
+silly modified mode [ 'test.js', 438, 420 ]
+silly extracting entry bm.js
+silly modified mode [ 'bm.js', 438, 420 ]
+silly extracting entry index.js
+silly modified mode [ 'index.js', 438, 420 ]
+silly extracting entry index.html
+silly modified mode [ 'index.html', 438, 420 ]
+silly extracting entry lib/connect-redis.js
+silly modified mode [ 'lib/connect-redis.js', 438, 420 ]
+silly extracting entry Makefile
+silly modified mode [ 'Makefile', 438, 420 ]
+silly extracting entry History.md
+silly modified mode [ 'History.md', 438, 420 ]
+silly extracting entry Readme.md
+silly modified mode [ 'Readme.md', 438, 420 ]
+silly extracting entry .gitmodules
+silly modified mode [ '.gitmodules', 438, 420 ]
+verbose caching C:\Users\hbhas\AppData\Roaming\npm-cache\connect-redis\1.4.0\package\package.json
+verbose loadDefaults connect-redis@1.4.0
+silly updated sha bytes 5068
+info shasum f7d6144852df26e7e99dc43ffe0044dd21118695
+info shasum C:\Users\hbhas\AppData\Roaming\npm-cache\connect-redis\1.4.0\package.tgz
+verbose from cache C:\Users\hbhas\AppData\Roaming\npm-cache\connect-redis\1.4.0\package\package.json
+verbose chmod C:\Users\hbhas\AppData\Roaming\npm-cache\connect-redis\1.4.0\package.tgz 644
+silly skipping chown for windows C:\Users\hbhas\AppData\Roaming\npm-cache\connect-redis\1.4.0\package.tgz
+http 200 https://registry.npmjs.org/hiredis/-/hiredis-0.1.14.tgz
+silly updated sha bytes 40960
+silly updated sha bytes 5391
+info shasum 37a8742dc26c14a7be8cf69549d96781403188b2
+info shasum C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314323244-0.7429820233955979\tmp.tgz
+verbose unpack C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314323244-0.7429820233955979\tmp.tgz
+silly gunzTarPerm modes [ '755', '644' ]
+silly extracting entry bench.js
+silly extracting entry deps/
+silly extracting entry deps/hiredis/
+silly extracting entry deps/hiredis/adapters/
+silly extracting entry deps/hiredis/adapters/ae.h
+silly extracting entry deps/hiredis/adapters/libev.h
+silly extracting entry deps/hiredis/adapters/libevent.h
+silly extracting entry deps/hiredis/async.c
+silly extracting entry deps/hiredis/async.h
+silly extracting entry deps/hiredis/CHANGELOG.md
+silly extracting entry deps/hiredis/COPYING
+silly extracting entry deps/hiredis/dict.c
+silly extracting entry deps/hiredis/dict.h
+silly extracting entry deps/hiredis/example-ae.c
+silly extracting entry deps/hiredis/example-libev.c
+silly extracting entry deps/hiredis/example-libevent.c
+silly extracting entry deps/hiredis/example.c
+silly extracting entry deps/hiredis/fmacros.h
+silly extracting entry deps/hiredis/hiredis.c
+silly extracting entry deps/hiredis/hiredis.h
+silly extracting entry deps/hiredis/Makefile
+silly extracting entry deps/hiredis/net.c
+silly extracting entry deps/hiredis/net.h
+silly extracting entry deps/hiredis/README.md
+silly extracting entry deps/hiredis/sds.c
+silly extracting entry deps/hiredis/sds.h
+silly extracting entry deps/hiredis/test.c
+silly extracting entry hiredis.cc
+silly extracting entry hiredis.js
+silly extracting entry Makefile
+silly extracting entry package.json
+silly extracting entry parser_bench.js
+silly extracting entry reader.cc
+silly extracting entry reader.h
+silly extracting entry README
+silly extracting entry test/
+silly extracting entry test/reader.js
+silly extracting entry wscript
+verbose has wscript [ undefined,
+verbose has wscript   { file: 'C:\\Users\\hbhas\\AppData\\Local\\Temp\\npm-1340314322549\\1340314323244-0.7429820233955979\\package\\package.json',
+verbose has wscript     gypfile: false,
+verbose has wscript     contributors: false,
+verbose has wscript     serverjs: false,
+verbose has wscript     wscript: true } ]
+verbose caching C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314323244-0.7429820233955979\package\package.json
+verbose loadDefaults hiredis@0.1.14
+verbose from cache C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314323244-0.7429820233955979\package\package.json
+verbose tar.pack [ 'C:\\Users\\hbhas\\AppData\\Roaming\\npm-cache\\hiredis\\0.1.14\\package.tgz',
+verbose tar.pack   'C:\\Users\\hbhas\\AppData\\Local\\Temp\\npm-1340314322549\\1340314323244-0.7429820233955979\\package' ]
+verbose tarball C:\Users\hbhas\AppData\Roaming\npm-cache\hiredis\0.1.14\package.tgz
+verbose folder C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314323244-0.7429820233955979\package
+verbose unpack C:\Users\hbhas\AppData\Roaming\npm-cache\hiredis\0.1.14\package.tgz
+silly gunzTarPerm modes [ '755', '644' ]
+silly extracting entry package.json
+silly modified mode [ 'package.json', 438, 420 ]
+silly extracting entry README
+silly modified mode [ 'README', 438, 420 ]
+silly extracting entry bench.js
+silly modified mode [ 'bench.js', 438, 420 ]
+silly extracting entry hiredis.js
+silly modified mode [ 'hiredis.js', 438, 420 ]
+silly extracting entry parser_bench.js
+silly modified mode [ 'parser_bench.js', 438, 420 ]
+silly extracting entry Makefile
+silly modified mode [ 'Makefile', 438, 420 ]
+silly extracting entry deps/hiredis/README.md
+silly modified mode [ 'deps/hiredis/README.md', 438, 420 ]
+silly extracting entry deps/hiredis/example.c
+silly modified mode [ 'deps/hiredis/example.c', 438, 420 ]
+silly extracting entry deps/hiredis/async.h
+silly modified mode [ 'deps/hiredis/async.h', 438, 420 ]
+silly extracting entry deps/hiredis/CHANGELOG.md
+silly modified mode [ 'deps/hiredis/CHANGELOG.md', 438, 420 ]
+silly extracting entry deps/hiredis/COPYING
+silly modified mode [ 'deps/hiredis/COPYING', 438, 420 ]
+silly extracting entry deps/hiredis/dict.c
+silly modified mode [ 'deps/hiredis/dict.c', 438, 420 ]
+silly extracting entry deps/hiredis/dict.h
+silly modified mode [ 'deps/hiredis/dict.h', 438, 420 ]
+silly extracting entry deps/hiredis/example-ae.c
+silly modified mode [ 'deps/hiredis/example-ae.c', 438, 420 ]
+silly extracting entry deps/hiredis/example-libev.c
+silly modified mode [ 'deps/hiredis/example-libev.c', 438, 420 ]
+silly extracting entry deps/hiredis/example-libevent.c
+silly modified mode [ 'deps/hiredis/example-libevent.c', 438, 420 ]
+silly extracting entry deps/hiredis/async.c
+silly modified mode [ 'deps/hiredis/async.c', 438, 420 ]
+silly extracting entry deps/hiredis/fmacros.h
+silly modified mode [ 'deps/hiredis/fmacros.h', 438, 420 ]
+silly extracting entry deps/hiredis/hiredis.c
+silly modified mode [ 'deps/hiredis/hiredis.c', 438, 420 ]
+silly extracting entry deps/hiredis/hiredis.h
+silly modified mode [ 'deps/hiredis/hiredis.h', 438, 420 ]
+silly extracting entry deps/hiredis/Makefile
+silly modified mode [ 'deps/hiredis/Makefile', 438, 420 ]
+silly extracting entry deps/hiredis/net.c
+silly modified mode [ 'deps/hiredis/net.c', 438, 420 ]
+silly extracting entry deps/hiredis/net.h
+silly modified mode [ 'deps/hiredis/net.h', 438, 420 ]
+silly extracting entry deps/hiredis/adapters/ae.h
+silly modified mode [ 'deps/hiredis/adapters/ae.h', 438, 420 ]
+silly extracting entry deps/hiredis/adapters/libev.h
+silly modified mode [ 'deps/hiredis/adapters/libev.h', 438, 420 ]
+silly extracting entry deps/hiredis/adapters/libevent.h
+silly modified mode [ 'deps/hiredis/adapters/libevent.h', 438, 420 ]
+silly extracting entry deps/hiredis/sds.c
+silly modified mode [ 'deps/hiredis/sds.c', 438, 420 ]
+silly extracting entry deps/hiredis/sds.h
+silly modified mode [ 'deps/hiredis/sds.h', 438, 420 ]
+silly extracting entry deps/hiredis/test.c
+silly modified mode [ 'deps/hiredis/test.c', 438, 420 ]
+silly extracting entry reader.cc
+silly modified mode [ 'reader.cc', 438, 420 ]
+silly extracting entry reader.h
+silly modified mode [ 'reader.h', 438, 420 ]
+silly extracting entry hiredis.cc
+silly modified mode [ 'hiredis.cc', 438, 420 ]
+silly extracting entry test/reader.js
+silly modified mode [ 'test/reader.js', 438, 420 ]
+silly extracting entry wscript
+silly modified mode [ 'wscript', 438, 420 ]
+verbose has wscript [ undefined,
+verbose has wscript   { file: 'C:\\Users\\hbhas\\AppData\\Roaming\\npm-cache\\hiredis\\0.1.14\\package\\package.json',
+verbose has wscript     gypfile: false,
+verbose has wscript     contributors: false,
+verbose has wscript     serverjs: false,
+verbose has wscript     wscript: true } ]
+verbose caching C:\Users\hbhas\AppData\Roaming\npm-cache\hiredis\0.1.14\package\package.json
+verbose loadDefaults hiredis@0.1.14
+silly updated sha bytes 40960
+silly updated sha bytes 5319
+info shasum cf78f56e168b98ffe7b6d54ad8ce20244326b465
+info shasum C:\Users\hbhas\AppData\Roaming\npm-cache\hiredis\0.1.14\package.tgz
+verbose from cache C:\Users\hbhas\AppData\Roaming\npm-cache\hiredis\0.1.14\package\package.json
+verbose chmod C:\Users\hbhas\AppData\Roaming\npm-cache\hiredis\0.1.14\package.tgz 644
+silly skipping chown for windows C:\Users\hbhas\AppData\Roaming\npm-cache\hiredis\0.1.14\package.tgz
+http 200 https://registry.npmjs.org/redis/-/redis-0.7.2.tgz
+silly updated sha bytes 40960
+silly updated sha bytes 6674
+info shasum fa557fef4985ab3e3384fdc5be6e2541a0bb49af
+info shasum C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314323579-0.22478495677933097\tmp.tgz
+verbose unpack C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314323579-0.22478495677933097\tmp.tgz
+silly gunzTarPerm modes [ '755', '644' ]
+silly extracting entry package.json
+silly extracting entry .npmignore
+silly extracting entry README.md
+silly extracting entry generate_commands.js
+silly extracting entry index.js
+silly extracting entry multi_bench.js
+silly extracting entry test.js
+silly extracting entry examples/auth.js
+silly extracting entry examples/mget.js
+silly extracting entry examples/monitor.js
+silly extracting entry examples/multi.js
+silly extracting entry examples/file.js
+silly extracting entry examples/psubscribe.js
+silly extracting entry examples/pub_sub.js
+silly extracting entry examples/simple.js
+silly extracting entry examples/sort.js
+silly extracting entry examples/subqueries.js
+silly extracting entry examples/extend.js
+silly extracting entry examples/subquery.js
+silly extracting entry examples/eval.js
+silly extracting entry examples/unix_socket.js
+silly extracting entry examples/backpressure_drain.js
+silly extracting entry examples/web_server.js
+silly extracting entry examples/multi2.js
+silly extracting entry changelog.md
+silly extracting entry tests/buffer_bench.js
+silly extracting entry tests/hiredis_parser.js
+silly extracting entry tests/re_sub_test.js
+silly extracting entry tests/reconnect_test.js
+silly extracting entry tests/sub_quit_test.js
+silly extracting entry tests/stress/codec.js
+silly extracting entry tests/stress/pubsub/pub.js
+silly extracting entry tests/stress/pubsub/server.js
+silly extracting entry tests/stress/pubsub/run
+silly extracting entry tests/stress/rpushblpop/pub.js
+silly extracting entry tests/stress/rpushblpop/server.js
+silly extracting entry tests/stress/rpushblpop/run
+silly extracting entry tests/stress/speed/speed.js
+silly extracting entry tests/stress/speed/00
+silly extracting entry tests/stress/speed/plot
+silly extracting entry tests/stress/speed/size-rate.png
+silly extracting entry lib/commands.js
+silly extracting entry lib/queue.js
+silly extracting entry lib/to_array.js
+silly extracting entry lib/util.js
+silly extracting entry lib/parser/hiredis.js
+silly extracting entry lib/parser/javascript.js
+verbose caching C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314323579-0.22478495677933097\package\package.json
+verbose loadDefaults redis@0.7.2
+verbose from cache C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314323579-0.22478495677933097\package\package.json
+verbose tar.pack [ 'C:\\Users\\hbhas\\AppData\\Roaming\\npm-cache\\redis\\0.7.2\\package.tgz',
+verbose tar.pack   'C:\\Users\\hbhas\\AppData\\Local\\Temp\\npm-1340314322549\\1340314323579-0.22478495677933097\\package' ]
+verbose tarball C:\Users\hbhas\AppData\Roaming\npm-cache\redis\0.7.2\package.tgz
+verbose folder C:\Users\hbhas\AppData\Local\Temp\npm-1340314322549\1340314323579-0.22478495677933097\package
+verbose unpack C:\Users\hbhas\AppData\Roaming\npm-cache\redis\0.7.2\package.tgz
+silly gunzTarPerm modes [ '755', '644' ]
+silly extracting entry package.json
+silly modified mode [ 'package.json', 438, 420 ]
+silly extracting entry .npmignore
+silly modified mode [ '.npmignore', 438, 420 ]
+silly extracting entry README.md
+silly modified mode [ 'README.md', 438, 420 ]
+silly extracting entry generate_commands.js
+silly modified mode [ 'generate_commands.js', 438, 420 ]
+silly extracting entry index.js
+silly modified mode [ 'index.js', 438, 420 ]
+silly extracting entry multi_bench.js
+silly modified mode [ 'multi_bench.js', 438, 420 ]
+silly extracting entry test.js
+silly modified mode [ 'test.js', 438, 420 ]
+silly extracting entry examples/auth.js
+silly modified mode [ 'examples/auth.js', 438, 420 ]
+silly extracting entry examples/mget.js
+silly modified mode [ 'examples/mget.js', 438, 420 ]
+silly extracting entry examples/monitor.js
+silly modified mode [ 'examples/monitor.js', 438, 420 ]
+silly extracting entry examples/multi.js
+silly modified mode [ 'examples/multi.js', 438, 420 ]
+silly extracting entry examples/file.js
+silly modified mode [ 'examples/file.js', 438, 420 ]
+silly extracting entry examples/psubscribe.js
+silly modified mode [ 'examples/psubscribe.js', 438, 420 ]
+silly extracting entry examples/pub_sub.js
+silly modified mode [ 'examples/pub_sub.js', 438, 420 ]
+silly extracting entry examples/simple.js
+silly modified mode [ 'examples/simple.js', 438, 420 ]
+silly extracting entry examples/sort.js
+silly modified mode [ 'examples/sort.js', 438, 420 ]
+silly extracting entry examples/subqueries.js
+silly modified mode [ 'examples/subqueries.js', 438, 420 ]
+silly extracting entry examples/extend.js
+silly modified mode [ 'examples/extend.js', 438, 420 ]
+silly extracting entry examples/subquery.js
+silly modified mode [ 'examples/subquery.js', 438, 420 ]
+silly extracting entry examples/eval.js
+silly modified mode [ 'examples/eval.js', 438, 420 ]
+silly extracting entry examples/unix_socket.js
+silly modified mode [ 'examples/unix_socket.js', 438, 420 ]
+silly extracting entry examples/backpressure_drain.js
+silly modified mode [ 'examples/backpressure_drain.js', 438, 420 ]
+silly extracting entry examples/web_server.js
+silly modified mode [ 'examples/web_server.js', 438, 420 ]
+silly extracting entry examples/multi2.js
+silly modified mode [ 'examples/multi2.js', 438, 420 ]
+silly extracting entry changelog.md
+silly modified mode [ 'changelog.md', 438, 420 ]
+silly extracting entry tests/buffer_bench.js
+silly modified mode [ 'tests/buffer_bench.js', 438, 420 ]
+silly extracting entry tests/hiredis_parser.js
+silly modified mode [ 'tests/hiredis_parser.js', 438, 420 ]
+silly extracting entry tests/reconnect_test.js
+silly modified mode [ 'tests/reconnect_test.js', 438, 420 ]
+silly extracting entry tests/re_sub_test.js
+silly modified mode [ 'tests/re_sub_test.js', 438, 420 ]
+silly extracting entry tests/sub_quit_test.js
+silly modified mode [ 'tests/sub_quit_test.js', 438, 420 ]
+silly extracting entry tests/stress/codec.js
+silly modified mode [ 'tests/stress/codec.js', 438, 420 ]
+silly extracting entry tests/stress/pubsub/pub.js
+silly modified mode [ 'tests/stress/pubsub/pub.js', 438, 420 ]
+silly extracting entry tests/stress/pubsub/server.js
+silly modified mode [ 'tests/stress/pubsub/server.js', 438, 420 ]
+silly extracting entry tests/stress/pubsub/run
+silly modified mode [ 'tests/stress/pubsub/run', 438, 420 ]
+silly extracting entry tests/stress/rpushblpop/pub.js
+silly modified mode [ 'tests/stress/rpushblpop/pub.js', 438, 420 ]
+silly extracting entry tests/stress/rpushblpop/server.js
+silly modified mode [ 'tests/stress/rpushblpop/server.js', 438, 420 ]
+silly extracting entry tests/stress/rpushblpop/run
+silly modified mode [ 'tests/stress/rpushblpop/run', 438, 420 ]
+silly extracting entry tests/stress/speed/speed.js
+silly modified mode [ 'tests/stress/speed/speed.js', 438, 420 ]
+silly extracting entry tests/stress/speed/00
+silly modified mode [ 'tests/stress/speed/00', 438, 420 ]
+silly extracting entry tests/stress/speed/plot
+silly modified mode [ 'tests/stress/speed/plot', 438, 420 ]
+silly extracting entry tests/stress/speed/size-rate.png
+silly modified mode [ 'tests/stress/speed/size-rate.png', 438, 420 ]
+silly extracting entry lib/commands.js
+silly modified mode [ 'lib/commands.js', 438, 420 ]
+silly extracting entry lib/queue.js
+silly modified mode [ 'lib/queue.js', 438, 420 ]
+silly extracting entry lib/to_array.js
+silly modified mode [ 'lib/to_array.js', 438, 420 ]
+silly extracting entry lib/util.js
+silly modified mode [ 'lib/util.js', 438, 420 ]
+silly extracting entry lib/parser/hiredis.js
+silly modified mode [ 'lib/parser/hiredis.js', 438, 420 ]
+silly extracting entry lib/parser/javascript.js
+silly modified mode [ 'lib/parser/javascript.js', 438, 420 ]
+verbose caching C:\Users\hbhas\AppData\Roaming\npm-cache\redis\0.7.2\package\package.json
+verbose loadDefaults redis@0.7.2
+silly updated sha bytes 40960
+silly updated sha bytes 6453
+info shasum db483c245e047d4c5e97efade01a40f47daa4d19
+info shasum C:\Users\hbhas\AppData\Roaming\npm-cache\redis\0.7.2\package.tgz
+verbose from cache C:\Users\hbhas\AppData\Roaming\npm-cache\redis\0.7.2\package\package.json
+verbose chmod C:\Users\hbhas\AppData\Roaming\npm-cache\redis\0.7.2\package.tgz 644
+silly skipping chown for windows C:\Users\hbhas\AppData\Roaming\npm-cache\redis\0.7.2\package.tgz
+silly resolved [ { name: 'connect-redis',
+silly resolved     description: 'Redis session store for Connect',
+silly resolved     version: '1.4.0',
+silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+silly resolved     main: './index.js',
+silly resolved     dependencies: { redis: '*', debug: '*' },
+silly resolved     devDependencies: { connect: '*' },
+silly resolved     engines: { node: '*' },
+silly resolved     _id: 'connect-redis@1.4.0',
+silly resolved     optionalDependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.24',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: 'f7d6144852df26e7e99dc43ffe0044dd21118695' },
+silly resolved     _from: 'connect-redis',
+silly resolved     scripts: {} },
+silly resolved   { name: 'hiredis',
+silly resolved     description: 'Wrapper for reply processing code in hiredis',
+silly resolved     version: '0.1.14',
+silly resolved     homepage: 'http://github.com/pietern/hiredis-node',
+silly resolved     author: { name: 'Pieter Noordhuis', email: 'pcnoordhuis@gmail.com' },
+silly resolved     main: 'hiredis',
+silly resolved     directories: { lib: '.' },
+silly resolved     scripts: { preinstall: 'make || gmake', test: 'node test/reader.js' },
+silly resolved     engines: { node: '*' },
+silly resolved     _id: 'hiredis@0.1.14',
+silly resolved     dependencies: {},
+silly resolved     devDependencies: {},
+silly resolved     optionalDependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.24',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: 'cf78f56e168b98ffe7b6d54ad8ce20244326b465' },
+silly resolved     _from: 'hiredis' },
+silly resolved   { name: 'redis',
+silly resolved     version: '0.7.2',
+silly resolved     description: 'Redis client library',
+silly resolved     author: { name: 'Matt Ranney', email: 'mjr@ranney.com' },
+silly resolved     maintainers: 
+silly resolved      [ { name: 'David Trejo',
+silly resolved          email: 'david.daniel.trejo@gmail.com',
+silly resolved          url: 'http://dtrejo.com/' } ],
+silly resolved     main: './index.js',
+silly resolved     scripts: { test: 'node ./test.js' },
+silly resolved     devDependencies: { metrics: '>=0.1.5' },
+silly resolved     optionalDependencies: { hiredis: '*' },
+silly resolved     repository: { type: 'git', url: 'git://github.com/mranney/node_redis.git' },
+silly resolved     _id: 'redis@0.7.2',
+silly resolved     dependencies: { hiredis: '*' },
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.24',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: 'db483c245e047d4c5e97efade01a40f47daa4d19' },
+silly resolved     _from: 'redis' } ]
+info into C:\_nodejs\hbnodejs\HotPie connect-redis@1.4.0
+info into C:\_nodejs\hbnodejs\HotPie hiredis@0.1.14
+info into C:\_nodejs\hbnodejs\HotPie redis@0.7.2
+info installOne connect-redis@1.4.0
+info installOne hiredis@0.1.14
+info installOne redis@0.7.2
+verbose from cache C:\Users\hbhas\AppData\Roaming\npm-cache\connect-redis\1.4.0\package\package.json
+info unbuild C:\_nodejs\hbnodejs\HotPie\node_modules\connect-redis
+verbose from cache C:\Users\hbhas\AppData\Roaming\npm-cache\hiredis\0.1.14\package\package.json
+info unbuild C:\_nodejs\hbnodejs\HotPie\node_modules\hiredis
+verbose from cache C:\Users\hbhas\AppData\Roaming\npm-cache\redis\0.7.2\package\package.json
+info unbuild C:\_nodejs\hbnodejs\HotPie\node_modules\redis
+verbose unpack C:\Users\hbhas\AppData\Roaming\npm-cache\connect-redis\1.4.0\package.tgz
+verbose unpack C:\Users\hbhas\AppData\Roaming\npm-cache\hiredis\0.1.14\package.tgz
+verbose unpack C:\Users\hbhas\AppData\Roaming\npm-cache\redis\0.7.2\package.tgz
+silly gunzTarPerm modes [ '755', '644' ]
+silly gunzTarPerm modes [ '755', '644' ]
+silly gunzTarPerm modes [ '755', '644' ]
+silly extracting entry package.json
+silly modified mode [ 'package.json', 438, 420 ]
+silly extracting entry package.json
+silly modified mode [ 'package.json', 438, 420 ]
+silly extracting entry package.json
+silly modified mode [ 'package.json', 438, 420 ]
+silly extracting entry README
+silly modified mode [ 'README', 438, 420 ]
+silly extracting entry bench.js
+silly modified mode [ 'bench.js', 438, 420 ]
+silly extracting entry .npmignore
+silly modified mode [ '.npmignore', 438, 420 ]
+silly extracting entry test.js
+silly modified mode [ 'test.js', 438, 420 ]
+silly extracting entry .npmignore
+silly modified mode [ '.npmignore', 438, 420 ]
+silly extracting entry README.md
+silly modified mode [ 'README.md', 438, 420 ]
+silly extracting entry hiredis.js
+silly modified mode [ 'hiredis.js', 438, 420 ]
+silly extracting entry parser_bench.js
+silly modified mode [ 'parser_bench.js', 438, 420 ]
+silly extracting entry bm.js
+silly modified mode [ 'bm.js', 438, 420 ]
+silly extracting entry index.js
+silly modified mode [ 'index.js', 438, 420 ]
+silly extracting entry generate_commands.js
+silly modified mode [ 'generate_commands.js', 438, 420 ]
+silly extracting entry index.js
+silly modified mode [ 'index.js', 438, 420 ]
+silly extracting entry Makefile
+silly modified mode [ 'Makefile', 438, 420 ]
+silly extracting entry deps/hiredis/README.md
+silly modified mode [ 'deps/hiredis/README.md', 438, 420 ]
+silly extracting entry index.html
+silly modified mode [ 'index.html', 438, 420 ]
+silly extracting entry lib/connect-redis.js
+silly modified mode [ 'lib/connect-redis.js', 438, 420 ]
+silly extracting entry multi_bench.js
+silly modified mode [ 'multi_bench.js', 438, 420 ]
+silly extracting entry test.js
+silly modified mode [ 'test.js', 438, 420 ]
+silly extracting entry deps/hiredis/example.c
+silly modified mode [ 'deps/hiredis/example.c', 438, 420 ]
+silly extracting entry deps/hiredis/async.h
+silly modified mode [ 'deps/hiredis/async.h', 438, 420 ]
+silly extracting entry examples/auth.js
+silly modified mode [ 'examples/auth.js', 438, 420 ]
+silly extracting entry deps/hiredis/CHANGELOG.md
+silly modified mode [ 'deps/hiredis/CHANGELOG.md', 438, 420 ]
+silly extracting entry examples/mget.js
+silly modified mode [ 'examples/mget.js', 438, 420 ]
+silly extracting entry deps/hiredis/COPYING
+silly modified mode [ 'deps/hiredis/COPYING', 438, 420 ]
+silly extracting entry examples/monitor.js
+silly modified mode [ 'examples/monitor.js', 438, 420 ]
+silly extracting entry examples/multi.js
+silly modified mode [ 'examples/multi.js', 438, 420 ]
+silly extracting entry examples/file.js
+silly modified mode [ 'examples/file.js', 438, 420 ]
+silly extracting entry examples/psubscribe.js
+silly modified mode [ 'examples/psubscribe.js', 438, 420 ]
+silly extracting entry examples/pub_sub.js
+silly modified mode [ 'examples/pub_sub.js', 438, 420 ]
+silly extracting entry examples/simple.js
+silly modified mode [ 'examples/simple.js', 438, 420 ]
+silly extracting entry examples/sort.js
+silly modified mode [ 'examples/sort.js', 438, 420 ]
+silly extracting entry examples/subqueries.js
+silly modified mode [ 'examples/subqueries.js', 438, 420 ]
+silly extracting entry examples/extend.js
+silly modified mode [ 'examples/extend.js', 438, 420 ]
+silly extracting entry examples/subquery.js
+silly modified mode [ 'examples/subquery.js', 438, 420 ]
+silly extracting entry examples/eval.js
+silly modified mode [ 'examples/eval.js', 438, 420 ]
+silly extracting entry Makefile
+silly modified mode [ 'Makefile', 438, 420 ]
+silly extracting entry History.md
+silly modified mode [ 'History.md', 438, 420 ]
+silly extracting entry examples/unix_socket.js
+silly modified mode [ 'examples/unix_socket.js', 438, 420 ]
+silly extracting entry deps/hiredis/dict.c
+silly modified mode [ 'deps/hiredis/dict.c', 438, 420 ]
+silly extracting entry deps/hiredis/dict.h
+silly modified mode [ 'deps/hiredis/dict.h', 438, 420 ]
+silly extracting entry examples/backpressure_drain.js
+silly modified mode [ 'examples/backpressure_drain.js', 438, 420 ]
+silly extracting entry examples/web_server.js
+silly modified mode [ 'examples/web_server.js', 438, 420 ]
+silly extracting entry examples/multi2.js
+silly modified mode [ 'examples/multi2.js', 438, 420 ]
+silly extracting entry changelog.md
+silly modified mode [ 'changelog.md', 438, 420 ]
+silly extracting entry tests/buffer_bench.js
+silly modified mode [ 'tests/buffer_bench.js', 438, 420 ]
+silly extracting entry tests/hiredis_parser.js
+silly modified mode [ 'tests/hiredis_parser.js', 438, 420 ]
+silly extracting entry tests/reconnect_test.js
+silly modified mode [ 'tests/reconnect_test.js', 438, 420 ]
+silly extracting entry tests/re_sub_test.js
+silly modified mode [ 'tests/re_sub_test.js', 438, 420 ]
+silly extracting entry tests/sub_quit_test.js
+silly modified mode [ 'tests/sub_quit_test.js', 438, 420 ]
+silly extracting entry Readme.md
+silly modified mode [ 'Readme.md', 438, 420 ]
+silly extracting entry .gitmodules
+silly modified mode [ '.gitmodules', 438, 420 ]
+silly extracting entry tests/stress/codec.js
+silly modified mode [ 'tests/stress/codec.js', 438, 420 ]
+silly extracting entry tests/stress/pubsub/pub.js
+silly modified mode [ 'tests/stress/pubsub/pub.js', 438, 420 ]
+silly extracting entry tests/stress/pubsub/server.js
+silly modified mode [ 'tests/stress/pubsub/server.js', 438, 420 ]
+silly extracting entry tests/stress/pubsub/run
+silly modified mode [ 'tests/stress/pubsub/run', 438, 420 ]
+silly extracting entry tests/stress/rpushblpop/pub.js
+silly modified mode [ 'tests/stress/rpushblpop/pub.js', 438, 420 ]
+silly extracting entry tests/stress/rpushblpop/server.js
+silly modified mode [ 'tests/stress/rpushblpop/server.js', 438, 420 ]
+silly extracting entry tests/stress/rpushblpop/run
+silly modified mode [ 'tests/stress/rpushblpop/run', 438, 420 ]
+silly extracting entry tests/stress/speed/speed.js
+silly modified mode [ 'tests/stress/speed/speed.js', 438, 420 ]
+silly extracting entry tests/stress/speed/00
+silly modified mode [ 'tests/stress/speed/00', 438, 420 ]
+silly extracting entry deps/hiredis/example-ae.c
+silly modified mode [ 'deps/hiredis/example-ae.c', 438, 420 ]
+silly extracting entry deps/hiredis/example-libev.c
+silly modified mode [ 'deps/hiredis/example-libev.c', 438, 420 ]
+silly extracting entry tests/stress/speed/plot
+silly modified mode [ 'tests/stress/speed/plot', 438, 420 ]
+silly extracting entry tests/stress/speed/size-rate.png
+silly modified mode [ 'tests/stress/speed/size-rate.png', 438, 420 ]
+silly extracting entry lib/commands.js
+silly modified mode [ 'lib/commands.js', 438, 420 ]
+silly extracting entry lib/queue.js
+silly modified mode [ 'lib/queue.js', 438, 420 ]
+silly extracting entry lib/to_array.js
+silly modified mode [ 'lib/to_array.js', 438, 420 ]
+silly extracting entry lib/util.js
+silly modified mode [ 'lib/util.js', 438, 420 ]
+silly extracting entry lib/parser/hiredis.js
+silly modified mode [ 'lib/parser/hiredis.js', 438, 420 ]
+silly extracting entry lib/parser/javascript.js
+silly modified mode [ 'lib/parser/javascript.js', 438, 420 ]
+silly extracting entry deps/hiredis/example-libevent.c
+silly modified mode [ 'deps/hiredis/example-libevent.c', 438, 420 ]
+silly extracting entry deps/hiredis/async.c
+silly modified mode [ 'deps/hiredis/async.c', 438, 420 ]
+silly extracting entry deps/hiredis/fmacros.h
+silly modified mode [ 'deps/hiredis/fmacros.h', 438, 420 ]
+silly extracting entry deps/hiredis/hiredis.c
+silly modified mode [ 'deps/hiredis/hiredis.c', 438, 420 ]
+silly extracting entry deps/hiredis/hiredis.h
+silly modified mode [ 'deps/hiredis/hiredis.h', 438, 420 ]
+silly extracting entry deps/hiredis/Makefile
+silly modified mode [ 'deps/hiredis/Makefile', 438, 420 ]
+silly extracting entry deps/hiredis/net.c
+silly modified mode [ 'deps/hiredis/net.c', 438, 420 ]
+silly extracting entry deps/hiredis/net.h
+silly modified mode [ 'deps/hiredis/net.h', 438, 420 ]
+silly extracting entry deps/hiredis/adapters/ae.h
+silly modified mode [ 'deps/hiredis/adapters/ae.h', 438, 420 ]
+silly extracting entry deps/hiredis/adapters/libev.h
+silly modified mode [ 'deps/hiredis/adapters/libev.h', 438, 420 ]
+silly extracting entry deps/hiredis/adapters/libevent.h
+silly modified mode [ 'deps/hiredis/adapters/libevent.h', 438, 420 ]
+silly extracting entry deps/hiredis/sds.c
+silly modified mode [ 'deps/hiredis/sds.c', 438, 420 ]
+silly extracting entry deps/hiredis/sds.h
+silly modified mode [ 'deps/hiredis/sds.h', 438, 420 ]
+silly extracting entry deps/hiredis/test.c
+silly modified mode [ 'deps/hiredis/test.c', 438, 420 ]
+silly extracting entry reader.cc
+silly modified mode [ 'reader.cc', 438, 420 ]
+silly extracting entry reader.h
+silly modified mode [ 'reader.h', 438, 420 ]
+silly extracting entry hiredis.cc
+silly modified mode [ 'hiredis.cc', 438, 420 ]
+silly extracting entry test/reader.js
+silly modified mode [ 'test/reader.js', 438, 420 ]
+silly extracting entry wscript
+silly modified mode [ 'wscript', 438, 420 ]
+verbose caching C:\_nodejs\hbnodejs\HotPie\node_modules\connect-redis\package.json
+verbose loadDefaults connect-redis@1.4.0
+info preinstall connect-redis@1.4.0
+verbose from cache C:\_nodejs\hbnodejs\HotPie\node_modules\connect-redis\package.json
+verbose readDependencies: using package.json deps
+verbose from cache C:\_nodejs\hbnodejs\HotPie\node_modules\connect-redis\package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'debug@*', null ]
+silly cache add: name, spec, args [ undefined, 'debug@*', [ 'debug@*', null ] ]
+verbose parsed url { pathname: 'debug@*', path: 'debug@*', href: 'debug@*' }
+silly cache add: name, spec, args [ 'debug', '*', [ 'debug', '*' ] ]
+verbose parsed url { pathname: '*', path: '*', href: '*' }
+verbose addNamed [ 'debug', '*' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'debug', '', false ]
+verbose raw, before any munging debug
+verbose url resolving [ 'https://registry.npmjs.org/', './debug' ]
+verbose url resolved https://registry.npmjs.org/debug
+verbose etag "3CD2NNHGG0H91YY9RIXJF7E1B"
+http GET https://registry.npmjs.org/debug
+verbose has wscript [ undefined,
+verbose has wscript   { file: 'C:\\_nodejs\\hbnodejs\\HotPie\\node_modules\\hiredis\\package.json',
+verbose has wscript     gypfile: false,
+verbose has wscript     contributors: false,
+verbose has wscript     serverjs: false,
+verbose has wscript     wscript: true } ]
+verbose caching C:\_nodejs\hbnodejs\HotPie\node_modules\hiredis\package.json
+verbose loadDefaults hiredis@0.1.14
+info preinstall hiredis@0.1.14
 verbose unsafe-perm in lifecycle true
-silly exec cmd "/c" "node server.js"
+silly exec cmd "/c" "make || gmake"
 silly spawning [ 'cmd',
-silly spawning   [ '/c', 'node server.js' ],
-silly spawning   'C:\\_nodejs\\hbnodejs\\HotPie' ]
-info application-name@0.0.1 Failed to exec start script
-ERR! application-name@0.0.1 start: `node server.js`
-ERR! `cmd "/c" "node server.js"` failed with 1
+silly spawning   [ '/c', 'make || gmake' ],
+silly spawning   'C:\\_nodejs\\hbnodejs\\HotPie\\node_modules\\hiredis' ]
+info hiredis@0.1.14 Failed to exec preinstall script
+info unbuild C:\_nodejs\hbnodejs\HotPie\node_modules\hiredis
+verbose from cache C:\_nodejs\hbnodejs\HotPie\node_modules\hiredis\package.json
+info preuninstall hiredis@0.1.14
+info uninstall hiredis@0.1.14
+verbose unbuild hiredis@0.1.14 [ true,
+verbose unbuild hiredis@0.1.14   'C:\\_nodejs\\hbnodejs\\HotPie\\node_modules',
+verbose unbuild hiredis@0.1.14   'C:\\_nodejs\\hbnodejs\\HotPie\\node_modules' ]
+info postuninstall hiredis@0.1.14
+ERR! hiredis@0.1.14 preinstall: `make || gmake`
+ERR! `cmd "/c" "make || gmake"` failed with 1
 ERR! 
-ERR! Failed at the application-name@0.0.1 start script.
-ERR! This is most likely a problem with the application-name package,
+ERR! Failed at the hiredis@0.1.14 preinstall script.
+ERR! This is most likely a problem with the hiredis package,
 ERR! not with npm itself.
 ERR! Tell the author that this fails on your system:
-ERR!     node server.js
+ERR!     make || gmake
 ERR! You can get their info via:
-ERR!     npm owner ls application-name
+ERR!     npm owner ls hiredis
 ERR! There is likely additional logging output above.
 ERR! 
 ERR! System Windows_NT 6.1.7601
-ERR! command "c:\\Program Files (x86)\\nodejs\\node.exe" "c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
+ERR! command "c:\\Program Files (x86)\\nodejs\\node.exe" "c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "redis" "hiredis" "connect-redis" "--save"
 ERR! cwd C:\_nodejs\hbnodejs\HotPie
 ERR! node -v v0.6.19
 ERR! npm -v 1.1.24
 ERR! code ELIFECYCLE
-ERR! message application-name@0.0.1 start: `node server.js`
-ERR! message `cmd "/c" "node server.js"` failed with 1
+ERR! message hiredis@0.1.14 preinstall: `make || gmake`
+ERR! message `cmd "/c" "make || gmake"` failed with 1
 ERR! errno {}
 verbose exit [ 1, true ]

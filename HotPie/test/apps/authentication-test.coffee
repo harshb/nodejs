@@ -12,4 +12,4 @@ describe "authentication", ->
         body = _body
         done()
     it "has user field", ->
-      assert.match body, /user/
+      assert.ok /user/.test(body)

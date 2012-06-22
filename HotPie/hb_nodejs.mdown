@@ -225,12 +225,304 @@ test/app/authentication-test.coffee
 
 npm install request --save
 
-3. in package.jason, move request entry to devDependencies section
 
-4. in test folder create a file _helper.js and add one line to it
+
+3. edit package.json
+
+in package.jason, move request  entry to devDependencies section
+
+4. in test folder create a file _helper.js and add following code  to it
+
+process.env.NODE_ENV = 'test';
 
 require('coffee-script');
 
-4. run tests
+5. write a test in test\apps\authentication-test.coffee
+
+
+assert  = require 'assert'
+request = require 'request'
+app     = require '../../server'
+
+describe "authentication", ->
+  describe "GET /login ", ->
+    body = null
+    before (done) ->
+      options =
+        uri: "http://localhost:3000/login"
+      request options, (err, response, _body) ->
+        body = _body
+        done()
+    it "has user field", ->
+      assert.ok /user/.test(body)
+
+6. run tests
 
 ./node_modules/mocha/bin/mocha test/_helper.js test/apps/authentication-test.coffee
+
+
+
+## install Extras
+
+1.  install libxmljs
+
+npm install libxmljs --save
+
+in package.jason, move libxmljs  entry to devDependencies section
+
+
+2. assert-extra.coffee
+
+copy this file to test folder root from PeepCode example
+
+
+3. modify _helper.js
+
+process.env.NODE_ENV = 'test';
+
+require('coffee-script');
+require(__dirname + '/assert-extra');
+
+
+4. edit  test in test\apps\authentication-test.coffee
+
+
+
+assert  = require 'assert'
+request = require 'request'
+app     = require '../../server'
+
+describe "authentication", ->
+  describe "GET /login ", ->
+    body = null
+    before (done) ->
+      options =
+        uri: "http://localhost:#{app.settings.port}/login"
+      request options, (err, response, _body) ->
+        body = _body
+        done()
+    it "has title", ->
+      assert.hasTag body, '//head/title', 'Hot Pie - Login'
+
+5. run tests
+
+./node_modules/mocha/bin/mocha test/_helper.js test/apps/authentication-test.coffee
+
+
+#Chapter 7: Test Support (47.5)
+
+
+1. create a cmd file for running  tests
+
+2. touch bin/test
+
+3. make it executable
+
+chmod +x bin/test
+
+4. paste this in the test file
+
+#! usr/bin env sh
+./node_modules/mocha/bin/mocha test/_helper.js test/apps/authentication-test.coffee
+
+5. to run test, type
+./bin/test
+
+6. add a script section in package.json
+
+with value of the shell command to run:
+
+"scripts": {
+    "test": "./bin/test"
+  }
+
+7. Now you can run tests by
+
+npm test
+
+
+# Running tests on a different port 
+
+1. modify server.js (all modifications with comment hb)
+now tests are running on port 3001
+
+/**
+ * Module dependencies.
+ */
+
+require('coffee-script');
+
+var express = require('express');
+
+var app = module.exports = express.createServer();
+
+// Configuration
+
+app.configure(function(){
+  app.set('views', __dirname + '/views');
+  app.set('view engine', 'jade');
+  //hb
+  app.set('port', 3000);
+  app.use(express.bodyParser());
+  app.use(express.methodOverride());
+  app.use(app.router);
+  app.use(express.static(__dirname + '/public'));
+});
+
+app.configure('development', function(){
+  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+});
+
+app.configure('production', function(){
+  app.use(express.errorHandler());
+});
+
+//hb added
+
+app.configure('test', function(){
+ app.set('port', 3001);
+});
+
+// Routes
+
+require('./apps/authentication/routes')(app)
+
+//hb
+/*
+app.listen(3000, function(){
+  console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+});
+*/
+
+
+2. modify the test so that the uri points to:
+
+uri: "http://localhost:#{app.settings.port}/login"
+
+assert  = require 'assert'
+request = require 'request'
+app     = require '../../server'
+
+describe "authentication", ->
+  describe "GET /login ", ->
+    body = null
+    before (done) ->
+      options =
+        uri: "http://localhost:#{app.settings.port}/login"
+      request options, (err, response, _body) ->
+        body = _body
+        done()
+    it "has user field", ->
+      assert.ok /user/.test(body)
+
+
+# Chapter 8: sessions (54.56)
+
+
+##Sessions left 59.09
+
+1.in routes.coffee add a route
+
+app.post '/sessions, (req,res)' ->
+  if('admin' is req.body.user) and ('12345' is req.body.password)
+    req.session.currentUser = req.body.user
+    req.flash 'info', "you are logged in as #{req.session.currentUser}"
+    res.redirect '/login'
+    return
+  req.flash 'error', 'Try again'
+  res.redirect '/login'
+
+
+
+2. Use Redis database for storing sessions in server.js
+
+a) add a variable
+
+//hb :Radis
+var RedisStore = require('connect-redis')(express);
+
+b) in a app.configure() section
+
+//hb :Radis
+  app.use(express.cookieParser());
+  app.use(express.session({
+    secret: "12345678",
+    store: new RedisStore
+   }));
+
+
+3. install Redis
+http://redis.io/download
+
+for windows:
+https://github.com/dmajkic/redis/
+
+Extract the zip file. Click on redis_server.exe to start the server
+
+
+4. Mac: install
+
+1. install redis with homebrew
+
+2. then run:
+
+npm install redis hiredis connect-redis --save
+
+
+## add flash
+in views/layout.jade
+
+  - var flashTypes = ['info', 'error']
+    each flashType in flashTypes
+      if flash[flashType]
+        p.flash(class=flashType)
+          = flash[flashType]
+
+
+# add helpers:
+
+1. in server.js
+
+// hb: Helpers
+require('./apps/helpers')(app);
+
+
+2. create a new file: apps/helpers.coffee
+
+
+helpers = (app) ->
+
+  app.dynamicHelpers
+    flash: (req, res) -> req.flash()
+    
+  app.helpers
+    urlFor: (obj) ->
+      if obj.id
+        "/admin/pies/#{obj.id}"
+      else
+        "/admin/pies"
+    cssClassForState: (expected, actual) ->
+      if actual is expected
+        [expected, 'on']
+      else
+        expected
+    cssClassForPieAge: (pie) ->
+      pieAge = (new Date).getTime() - pie.stateUpdatedAt
+      minutes = (num) -> 1000 * 60 * num
+      switch pie.state
+        when 'making'
+          if pieAge > minutes(1)
+            'almost-ready'
+          else
+            'not-ready'
+        when 'ready'
+          if pieAge < minutes(1)
+            'pipin-hot'
+          else if pieAge < minutes(2)
+            'hot'
+          else
+            'warm'
+        else
+          null
+
+module.exports = helpers
